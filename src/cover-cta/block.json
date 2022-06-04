@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"version": "0.1.0",
+	"name": "magnolia-block/magnolia-cover-cta",
+    "title": "Magnolia Cover CTA",
+    "category": "magnolia-blocks",
+    "icon": "layout",
+    "description": "This is a block that will display the about information for the site in a clean and easy to place way either in the sidebar or post content",
+	"supports": {
+		"html": false,
+		"reusable": true
+	},
+	"textdomain": "magnolia-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

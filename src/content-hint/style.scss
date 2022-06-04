@@ -1,0 +1,15 @@
+.content_hint {
+    position: relative;
+    width: 320px;
+    height: 250px;
+    background: lightgray;
+    margin: 0 auto;
+}
+.content_hint::after {
+    content: "320 x 250";
+    position: absolute;
+    font-size: 24px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

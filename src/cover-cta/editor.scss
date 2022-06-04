@@ -1,0 +1,78 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+ /**Icons Panel**/
+ .editor-block-list-item-magnolia-block-magnolia-cover-cta,
+ .editor-block-list-item-magnolia-block-magnolia-cover-cta .block-editor-block-types-list__item-icon,
+ .editor-block-list-item-magnolia-block-magnolia-sidebar-cover-cta,
+ .editor-block-list-item-magnolia-block-magnolia-sidebar-cover-cta .block-editor-block-types-list__item-icon,
+ .editor-block-list-item-magnolia-block-magnolia-footer-cover-cta, 
+ .editor-block-list-item-magnolia-block-magnolia-footer-cover-cta .block-editor-block-types-list__item-icon {
+ color: #275f62 !important;
+  }
+  /**panel end**/
+.wp-block-magnolia-block-magnolia-cover-cta {
+	font-family: var(--mv-trellis-font-body, "Helvetica Neue", Arial, Helvetica, sans-serif);
+	font-weight: 400;
+	line-height: 1.625;
+
+	a {
+		color: #275f62;
+		color: var(--mv-trellis-color-link, #275f62);
+	}
+
+	.wp-block-button__link {
+		background-color: var(--mv-trellis-color-link, #275f62);
+		text-decoration: none;
+	}
+
+	.wp-block-button__link:hover,
+	.wp-block-button__link:focus,
+	.wp-block-button__link:focus-within {
+		background-color: var(--mv-trellis-color-link-hover, #44a6ab);
+	}
+}
+
+.post-type-post, .post-type-page  {
+	.wp-block-magnolia-block-magnolia-cover-cta {
+		border: 1px solid #e1e1e1;
+		margin-bottom: 20px;
+	}
+}
+
+/***
+Sidebar
+***/
+[data-type="magnolia-block/magnolia-sidebar-cover-cta"],
+[data-type="magnolia-block/magnolia-footer-cover-cta"] {
+	font-family: var(--mv-trellis-font-body, "Helvetica Neue", Arial, Helvetica, sans-serif);
+	font-weight: 400;
+	line-height: 1.625;
+
+	a,
+	a:visited {
+		color: #275f62;
+		color: var(--mv-trellis-color-link, #275f62);
+	}
+
+	a:focus,
+	a:focus-within,
+	a:hover {
+		color: #44a6ab;
+		color: var(--mv-trellis-color-link-hover, #44a6ab);
+		text-decoration: underline;
+	}
+
+	.wp-block-button__link {
+		background-color: var(--mv-trellis-color-link, #275f62);
+		text-decoration: none;
+	}
+
+	.wp-block-button__link:hover,
+	.wp-block-button__link:focus,
+	.wp-block-button__link:focus-within {
+		background-color: var(--mv-trellis-color-link-hover, #44a6ab);
+	}
+}

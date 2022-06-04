@@ -1,0 +1,179 @@
+%turn-off-mvt-main {
+	margin-bottom: initial;
+}
+
+%turn-off-bamboo {
+	border-left: none;
+	margin-top: initial;
+}
+
+%turn-off-wisteria {
+	border-radius: initial;
+	box-shadow: initial;
+}
+
+%turn-off-birch {
+	border: initial;
+	box-shadow: initial;
+}
+
+.wp-block-magnolia-block-magnolia-cover-cta {
+
+	p,
+	.wp-block-button {
+		padding: 24px;
+	}
+
+	.wp-block-button__link {
+		background-color: var(--mv-trellis-color-link, #275f62);
+		text-decoration: none;
+	}
+
+	.wp-block-button__link:hover,
+	.wp-block-button__link:focus,
+	.wp-block-button__link:focus-within {
+		background-color: var(--mv-trellis-color-link-hover, #44a6ab);
+		text-decoration: none;
+	}
+}
+
+/***
+Sidebar
+***/
+.wp-block-magnolia-block-magnolia-sidebar-cover-cta,
+.wp-block-magnolia-block-magnolia-footer-cover-cta {
+	.wp-block-button__link {
+		background-color: var(--mv-trellis-color-link, #275f62);
+		text-decoration: none;
+	}
+
+	.wp-block-button__link:hover,
+	.wp-block-button__link:focus,
+	.wp-block-button__link:focus-within {
+		background-color: var(--mv-trellis-color-link-hover, #44a6ab);
+		text-decoration: none;
+	}
+}
+
+body.bamboo {
+	.wp-block-magnolia-block-magnolia-sidebar-cover-cta {
+		border-bottom: thin solid #e1e1e1;
+		padding-bottom: 24px;
+	}
+}
+
+/**
+Footer 
+***/
+body.bamboo {
+	.wp-block-magnolia-block-magnolia-footer-cover-cta {
+		border-right: thin solid #e1e1e1;
+		padding-right: 24px;
+	}
+}
+
+body.birch-trellis {
+
+	.wp-block-magnolia-block-magnolia-footer-cover-cta,
+	.wp-block-magnolia-block-magnolia-sidebar-cover-cta {
+		.wp-block-cover {
+			border: 2px solid #1e1e1e;
+		}
+	}
+}
+
+body.wisteria-trellis {
+
+	.wp-block-magnolia-block-magnolia-footer-cover-cta,
+	.wp-block-magnolia-block-magnolia-sidebar-cover-cta {
+		.wp-block-button__link {
+			box-shadow: -3px 5px 5px 5px rgb(0 0 0 / 10%);
+			margin-bottom: 24px;
+		}
+
+		.wp-block-button__link:hover,
+		.wp-block-button__link:focus,
+		.wp-block-button__link:focus-within {
+			box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 10%);
+		}
+	}
+}
+
+/***
+Trellis Theme Styles
+**/
+body.mediavine-trellis .mvt-content {
+	.wp-block-magnolia-block-magnolia-cover-cta {
+		@extend %turn-off-wisteria;
+		@extend %turn-off-bamboo;
+		@extend %turn-off-birch;
+		border: 1px solid #e1e1e1;
+		margin-bottom: 20px;
+
+		.wp-block-columns {
+			margin-bottom: 0;
+		}
+	}
+}
+
+body.wisteria-trellis .mvt-content {
+	.wp-block-magnolia-block-magnolia-cover-cta {
+		@extend %turn-off-mvt-main;
+		@extend %turn-off-bamboo;
+		@extend %turn-off-birch;
+		border-radius: 0.25rem;
+		box-shadow: -5px 5px 25px 5px rgb(0 0 0 / 10%);
+		margin-bottom: 24px;
+	}
+}
+
+body.bamboo .mvt-content {
+	.wp-block-magnolia-block-magnolia-cover-cta {
+		@extend %turn-off-mvt-main;
+		@extend %turn-off-wisteria;
+		@extend %turn-off-birch;
+		border-left: thin solid #e1e1e1;
+		margin-top: 24px;
+	}
+}
+
+body.birch-trellis .mvt-content {
+	.wp-block-magnolia-block-magnolia-cover-cta {
+		@extend %turn-off-mvt-main;
+		@extend %turn-off-wisteria;
+		@extend %turn-off-bamboo;
+		margin-top: 40px;
+		border: 2px solid inherit;
+		box-shadow: -15px 15px 0 0 var(--mv-trellis-color-link, #000);
+
+		.wp-block-columns {
+			margin-bottom: 0;
+		}
+	}
+}
+
+body.birch-trellis {
+
+	.wp-block-magnolia-block-magnolia-cover-cta,
+	.wp-block-magnolia-block-magnolia-sidebar-cover-cta,
+	.wp-block-magnolia-block-magnolia-footer-cover-cta {
+		.wp-block-button__link {
+			text-decoration: none;
+			transition: color .1s ease-in-out, background-color .1s ease-in-out;
+			color: var(--mv-trellis-color-link, #000);
+			height: 100%;
+			border: 2px solid #1e1e1e;
+			background: #e1e1e1;
+			border-radius: 0;
+			box-shadow: -8px 8px 0 0 #e1e1e1, inset -6px 6px 0 0 #fff;
+		}
+
+		.wp-block-button__link:hover,
+		.wp-block-button__link:focus,
+		.wp-block-button__link:focus-within {
+			background: var(--mv-trellis-color-link-hover, #767676);
+			box-shadow: none;
+			color: #fff;
+		}
+	}
+}

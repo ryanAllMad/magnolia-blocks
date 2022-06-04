@@ -1,0 +1,213 @@
+/**
+Core Styles
+ */
+$margin-bottom: 10px;
+$middle: auto 0;
+$two: 2%;
+
+%turn-off-mvt-main {
+	margin-bottom: initial;
+}
+
+%turn-off-bamboo {
+	border-left: none;
+	margin-top: initial;
+}
+
+%turn-off-wisteria {
+	border-radius: initial;
+	box-shadow: initial;
+}
+
+%turn-off-birch {
+	border: initial;
+	box-shadow: initial;
+}
+
+.wp-block-magnolia-block-magnolia-about {
+	margin-bottom: initial;
+
+	* {
+		margin-bottom: $margin-bottom;
+	}
+}
+
+/***
+Sidebar Block Styles
+**/
+.wp-block-magnolia-block-magnolia-about-sidebar {
+	img {
+		max-width: 145px;
+		margin: 0 auto;
+	}
+
+	h2,
+	p {
+		text-align: center;
+	}
+}
+
+/***
+Trellis Theme Styles - Sidebar
+**/
+body.mediavine-trellis .wp-block-magnolia-block-magnolia-about-sidebar {
+	@extend %turn-off-wisteria;
+	@extend %turn-off-bamboo;
+	@extend %turn-off-birch;
+	margin-bottom: 20px;
+	padding-top: 20px;
+}
+
+body.wisteria-trellis .wp-block-magnolia-block-magnolia-about-sidebar {
+	@extend %turn-off-mvt-main;
+	@extend %turn-off-bamboo;
+	@extend %turn-off-birch;
+
+	img {
+		border-radius: 0.25rem;
+		box-shadow: -5px 5px 25px 5px rgb(0 0 0 / 10%);
+		margin-bottom: 24px;
+	}
+}
+
+body.bamboo .wp-block-magnolia-block-magnolia-about-sidebar {
+	@extend %turn-off-mvt-main;
+	@extend %turn-off-wisteria;
+	@extend %turn-off-birch;
+	border-bottom: thin solid #e1e1e1;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+body.birch-trellis .wp-block-magnolia-block-magnolia-about-sidebar {
+	@extend %turn-off-mvt-main;
+	@extend %turn-off-wisteria;
+	@extend %turn-off-bamboo;
+}
+
+/***
+Post Block Styles
+**/
+.mvt-content {
+	.wp-block-magnolia-block-magnolia-about {
+		padding: 5% 2%;
+
+		.wp-block-column:first-child {
+			max-width: calc((100% / 4) - var(--wp--style--block-gap, 2em));
+		}
+
+		.wp-block-image {
+			margin-top: 10px;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.wp-block-magnolia-block-magnolia-about {
+		.wp-block-columns {
+			justify-content: flex-end;
+		}
+	}
+}
+
+/***
+Trellis Theme Styles - Posts
+**/
+body.mediavine-trellis .mvt-content {
+	.wp-block-magnolia-block-magnolia-about {
+		@extend %turn-off-wisteria;
+		@extend %turn-off-bamboo;
+		@extend %turn-off-birch;
+		border: 1px solid #e1e1e1;
+		margin-bottom: 20px;
+	}
+}
+
+body.wisteria-trellis .mvt-content {
+	.wp-block-magnolia-block-magnolia-about {
+		@extend %turn-off-mvt-main;
+		@extend %turn-off-bamboo;
+		@extend %turn-off-birch;
+		border-radius: 0.25rem;
+		box-shadow: -5px 5px 25px 5px rgb(0 0 0 / 10%);
+		margin-bottom: 24px;
+	}
+}
+
+body.bamboo .mvt-content {
+	.wp-block-magnolia-block-magnolia-about {
+		@extend %turn-off-mvt-main;
+		@extend %turn-off-wisteria;
+		@extend %turn-off-birch;
+		border-left: thin solid #e1e1e1;
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+}
+
+body.birch-trellis .mvt-content {
+	.wp-block-magnolia-block-magnolia-about {
+		@extend %turn-off-mvt-main;
+		@extend %turn-off-wisteria;
+		@extend %turn-off-bamboo;
+		border: 2px solid inherit;
+		box-shadow: -15px 15px 0 0 var(--mv-trellis-color-link, #000);
+	}
+
+	/**
+	Resolve grid column one bug in birch before Birch 1.0
+	**/
+	.wp-block-magnolia-block-magnolia-about>.wp-block-columns,
+	.wp-block-magnolia-block-magnolia-about>.wp-block-columns>* {
+		grid-column: unset !important;
+	}
+}
+
+/***
+Footer Block Styles
+**/
+.wp-block-magnolia-block-magnolia-about-footer {
+	padding: 12px 6px 0 12px;
+
+	h2 {
+		font-size: 1rem;
+	}
+}
+
+/***
+Trellis Theme Styles - Footer
+**/
+body.mediavine-trellis .wp-block-magnolia-block-magnolia-about-footer {
+	@extend %turn-off-wisteria;
+	@extend %turn-off-bamboo;
+	@extend %turn-off-birch;
+	border: 1px solid #e1e1e1;
+	margin-bottom: 20px;
+	padding: 24px 6px;
+}
+
+body.wisteria-trellis .wp-block-magnolia-block-magnolia-about-footer {
+	@extend %turn-off-mvt-main;
+	@extend %turn-off-bamboo;
+	@extend %turn-off-birch;
+	border-radius: 0.25rem;
+	box-shadow: -5px 5px 25px 5px rgb(0 0 0 / 10%);
+	margin-bottom: 24px;
+}
+
+body.bamboo .wp-block-magnolia-block-magnolia-about-footer {
+	@extend %turn-off-mvt-main;
+	@extend %turn-off-wisteria;
+	@extend %turn-off-birch;
+	border-right: thin solid #e1e1e1;
+	padding-right: 24px;
+
+}
+
+body.birch-trellis .wp-block-magnolia-block-magnolia-about-footer {
+	@extend %turn-off-mvt-main;
+	@extend %turn-off-wisteria;
+	@extend %turn-off-bamboo;
+	border: 2px solid inherit;
+	box-shadow: -15px 15px 0 0 var(--mv-trellis-color-link, #000);
+}

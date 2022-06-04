@@ -1,0 +1,204 @@
+%gird-one {
+	grid-column: 1 span/1;
+	grid-row: 1 span/1;
+}
+
+%turn-off-mvt-main {
+	margin-bottom: initial;
+}
+
+%turn-off-bamboo {
+	border-left: none;
+	margin-top: initial;
+}
+
+%turn-off-wisteria {
+	border-radius: initial;
+	box-shadow: initial;
+}
+
+%turn-off-birch {
+	border: initial;
+	box-shadow: initial;
+}
+
+.wp-block-magnolia-block-magnolia-post-grid {
+	.wp-block-latest-posts {
+		margin-left: 0;
+
+		li {
+
+			>a,
+			.wp-block-latest-posts__post-excerpt {
+				padding: 12px;
+				display: block;
+			}
+		}
+
+		a {
+			font-family: var(--mv-trellis-font-heading, Georgia, Times, "Times New Roman", serif);
+			font-size: var(--mv-trellis-h2-font-size, 1.875rem);
+			font-weight: 700;
+			color: var(--mv-trellis-color-link, #275f62);
+			text-decoration: none;
+		}
+
+		a:hover,
+		a:focus,
+		a:focus-within {
+			color: var(--mv-trellis-color-link-hover, #44a6ab);
+		}
+	}
+}
+
+/***
+Sidebar
+.wp-block-magnolia-block-sidebar-post-grid
+***/
+.wp-block-magnolia-block-sidebar-post-grid {
+	.wp-block-latest-posts {
+	li {
+		margin-right: 0;
+	}
+}
+}
+body.bamboo {
+	.wp-block-magnolia-block-sidebar-post-grid {
+		li {
+			border-bottom: thin solid #e1e1e1;
+		}
+	}
+}
+
+body.birch-trellis {
+	.wp-block-magnolia-block-sidebar-post-grid {
+
+		.wp-block-latest-posts__featured-image a,
+		.wp-block-latest-posts__featured-image a:hover,
+		.wp-block-latest-posts__featured-image a:focus,
+		.wp-block-latest-posts__featured-image a:focus-within {
+			border-bottom: 0;
+		}
+	}
+}
+
+/**
+Footer Styles
+**/
+body.bamboo {
+	.wp-block-magnolia-block-footer-post-grid {
+		border-right: thin solid #e1e1e1;
+		padding-right: 24px;
+	}
+}
+
+body.birch-trellis {
+	.wp-block-magnolia-block-footer-post-grid {
+		.wp-block-latest-posts__featured-image {
+
+			img {
+				border: 2px solid #1e1e1e;
+			}
+
+			a,
+			a:visited {
+				border-bottom: 0;
+			}
+		}
+	}
+}
+
+body.wisteria-trellis {
+
+	.wp-block-magnolia-block-footer-post-grid,
+	.wp-block-magnolia-block-sidebar-post-grid {
+		img {
+			border-radius: 0.25rem;
+			box-shadow: -3px 5px 5px 5px rgb(0 0 0 / 10%);
+			margin-bottom: 24px;
+		}
+	}
+}
+
+/***
+Trellis Theme Styles
+**/
+body.mediavine-trellis .mvt-content {
+	.wp-block-magnolia-block-magnolia-post-grid {
+		li {
+			@extend %turn-off-wisteria;
+			@extend %turn-off-bamboo;
+			@extend %turn-off-birch;
+			border: 1px solid #e1e1e1;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+body.wisteria-trellis .mvt-content {
+	.wp-block-magnolia-block-magnolia-post-grid {
+		li {
+			@extend %turn-off-mvt-main;
+			@extend %turn-off-bamboo;
+			@extend %turn-off-birch;
+			border-radius: 0.25rem;
+			box-shadow: -5px 5px 25px 5px rgb(0 0 0 / 10%);
+			margin-bottom: 24px;
+		}
+	}
+}
+
+body.bamboo .mvt-content {
+	.wp-block-magnolia-block-magnolia-post-grid {
+		li {
+			@extend %turn-off-mvt-main;
+			@extend %turn-off-wisteria;
+			@extend %turn-off-birch;
+			border-left: thin solid #e1e1e1;
+			margin-bottom: 24px;
+			padding-left: 24px;
+			padding-top: 24px;
+			border-top: thin solid #e1e1e1;
+
+			>.wp-block-latest-posts__post-excerpt,
+			>a {
+				padding: 0;
+			}
+
+			.wp-block-latest-posts__featured-image img {
+				border-radius: 50%;
+			}
+		}
+
+	}
+}
+
+body.birch-trellis .mvt-content {
+	.wp-block-magnolia-block-magnolia-post-grid {
+		li {
+			@extend %turn-off-mvt-main;
+			@extend %turn-off-wisteria;
+			@extend %turn-off-bamboo;
+			margin-top: 40px;
+			border: 2px solid inherit;
+			box-shadow: -15px 15px 0 0 var(--mv-trellis-color-link, #000);
+		}
+	}
+}
+
+@media screen and (max-width: 1160px) {
+	body.birch-trellis.page-template-page-full-width {
+		#content .article {
+			max-width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 781px) {
+	body.birch-trellis {
+
+		.wp-block-latest-posts.columns-2 li:nth-child(2n) {
+			margin-right: 1.25em;
+		}
+	}
+}

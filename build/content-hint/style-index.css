@@ -1,0 +1,1 @@
+.content_hint{background:#d3d3d3;height:250px;margin:0 auto;position:relative;width:320px}.content_hint:after{content:"320 x 250";font-size:24px;left:50%;position:absolute;top:50%;transform:translate(-50%,-50%)}
